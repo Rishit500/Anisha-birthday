@@ -1,9 +1,15 @@
-// Wait 3 seconds
+alert("JavaScript is working!");
 
-setTimeout(() => {
+window.addEventListener("load", function () {
 
-    document.getElementById("loader").style.display = "none";
+    setTimeout(function () {
 
-    document.getElementById("website").style.display = "block";
+        const loader = document.getElementById("loader");
+        const website = document.getElementById("website");
 
-}, 3000);
+        if (loader) loader.style.display = "none";
+        if (website) website.style.display = "block";
+
+    }, 3000);
+
+});
