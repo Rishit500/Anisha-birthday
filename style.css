@@ -1,120 +1,79 @@
-/* ==========================================
-   Happy Birthday Miss Clumsy ❤️
-   Created by Rishit
-========================================== */
+/* Main Website */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+#website{
+    display:block;   /* Change back to none later if using loader */
 }
 
-html{
-    scroll-behavior:smooth;
-}
+/* Hero Section */
 
-body{
-    font-family:'Poppins',sans-serif;
-    overflow-x:hidden;
-    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#ffd1dc,#ffe4ec);
-    background-size:400% 400%;
-    animation:bgMove 15s ease infinite;
+.hero{
+    width:100%;
     min-height:100vh;
-    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
 }
 
-/* Animated Background */
+/* Glass Card */
 
-@keyframes bgMove{
-
-0%{
-background-position:0% 50%;
+.glass-card{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
-50%{
-background-position:100% 50%;
+/* Birthday Tag */
+
+.birthday-tag{
+    display:inline-block;
+    background:white;
+    color:#ff4d88;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:25px;
 }
 
-100%{
-background-position:0% 50%;
+/* Heading */
+
+.glass-card h1{
+    font-family:'Great Vibes',cursive;
+    font-size:72px;
+    margin-bottom:10px;
 }
 
+.glass-card h2{
+    font-size:34px;
+    margin-bottom:25px;
 }
 
-/* Loading Screen */
-
-#loader{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-background:#ff5c8a;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-z-index:9999;
-
+.subtitle{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:35px;
 }
 
-.loader-heart{
+/* Button */
 
-width:90px;
-height:90px;
-background:#fff;
-transform:rotate(-45deg);
-animation:heartbeat 1s infinite;
-position:relative;
-margin-bottom:30px;
-
+#beginBtn{
+    background:white;
+    color:#ff4d88;
+    border:none;
+    padding:18px 40px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-.loader-heart::before,
-.loader-heart::after{
-
-content:"";
-position:absolute;
-width:90px;
-height:90px;
-background:#fff;
-border-radius:50%;
-
+#beginBtn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 25px rgba(255,255,255,0.4);
 }
-
-.loader-heart::before{
-
-top:-45px;
-left:0;
-
-}
-
-.loader-heart::after{
-
-left:45px;
-top:0;
-
-}
-
-@keyframes heartbeat{
-
-0%{
-transform:rotate(-45deg) scale(1);
-}
-
-50%{
-transform:rotate(-45deg) scale(1.15);
-}
-
-100%{
-transform:rotate(-45deg) scale(1);
-}
-
-}
-
-#loader h2{
-
-font-size:30px;
-font-weight:600;
-margin-top:20
