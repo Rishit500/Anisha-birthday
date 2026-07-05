@@ -1,79 +1,304 @@
-/* Main Website */
+/* =====================================================
+   HAPPY BIRTHDAY MISS CLUMSY ❤️
+   Created by Rishit
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:#fff;
+    background:linear-gradient(-45deg,#ff9a9e,#fecfef,#fad0c4,#ffd1dc);
+    background-size:400% 400%;
+    animation:gradientBG 15s ease infinite;
+}
+
+/* Animated Background */
+
+@keyframes gradientBG{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* ==========================
+        LOADER
+========================== */
+
+#loader{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100vh;
+
+background:#ff5b8f;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+z-index:9999;
+
+transition:1s;
+
+}
+
+.loader-heart{
+
+width:90px;
+height:90px;
+
+background:white;
+
+transform:rotate(-45deg);
+
+position:relative;
+
+animation:heartbeat 1s infinite;
+
+margin-bottom:35px;
+
+}
+
+.loader-heart::before,
+.loader-heart::after{
+
+content:"";
+
+position:absolute;
+
+width:90px;
+height:90px;
+
+background:white;
+
+border-radius:50%;
+
+}
+
+.loader-heart::before{
+
+top:-45px;
+left:0;
+
+}
+
+.loader-heart::after{
+
+left:45px;
+top:0;
+
+}
+
+@keyframes heartbeat{
+
+0%{
+transform:rotate(-45deg) scale(1);
+}
+
+50%{
+transform:rotate(-45deg) scale(1.15);
+}
+
+100%{
+transform:rotate(-45deg) scale(1);
+}
+
+}
+
+#loader h2{
+
+font-size:32px;
+
+margin-top:15px;
+
+font-weight:600;
+
+}
+
+#loader p{
+
+margin-top:12px;
+
+font-size:17px;
+
+opacity:.95;
+
+}
+
+/* ==========================
+      MAIN WEBSITE
+========================== */
 
 #website{
-    display:block;   /* Change back to none later if using loader */
+
+display:none;
+
 }
 
-/* Hero Section */
+/* ==========================
+      HERO SECTION
+========================== */
 
 .hero{
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+position:relative;
+
 }
 
-/* Glass Card */
+/* ==========================
+       GLASS CARD
+========================== */
 
 .glass-card{
-    width:90%;
-    max-width:700px;
-    background:rgba(255,255,255,0.18);
-    backdrop-filter:blur(18px);
-    border-radius:30px;
-    padding:50px;
-    text-align:center;
-    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+
+width:90%;
+
+max-width:720px;
+
+padding:60px;
+
+text-align:center;
+
+background:rgba(255,255,255,.18);
+
+border:1px solid rgba(255,255,255,.25);
+
+border-radius:35px;
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 20px 60px rgba(0,0,0,.18);
+
 }
 
 /* Birthday Tag */
 
 .birthday-tag{
-    display:inline-block;
-    background:white;
-    color:#ff4d88;
-    padding:10px 20px;
-    border-radius:30px;
-    font-weight:600;
-    margin-bottom:25px;
+
+display:inline-block;
+
+padding:10px 24px;
+
+background:white;
+
+color:#ff4d88;
+
+border-radius:40px;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:25px;
+
+letter-spacing:1px;
+
 }
 
-/* Heading */
+/* Main Heading */
 
 .glass-card h1{
-    font-family:'Great Vibes',cursive;
-    font-size:72px;
-    margin-bottom:10px;
+
+font-family:'Great Vibes',cursive;
+
+font-size:78px;
+
+margin-bottom:10px;
+
+color:white;
+
 }
 
 .glass-card h2{
-    font-size:34px;
-    margin-bottom:25px;
+
+font-size:34px;
+
+font-weight:600;
+
+margin-bottom:25px;
+
 }
 
 .subtitle{
-    font-size:20px;
-    line-height:1.8;
-    margin-bottom:35px;
+
+font-size:19px;
+
+line-height:1.9;
+
+margin-bottom:40px;
+
+opacity:.96;
+
 }
 
 /* Button */
 
 #beginBtn{
-    background:white;
-    color:#ff4d88;
-    border:none;
-    padding:18px 40px;
-    border-radius:50px;
-    font-size:18px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
+
+padding:18px 45px;
+
+border:none;
+
+outline:none;
+
+cursor:pointer;
+
+border-radius:50px;
+
+background:white;
+
+color:#ff4d88;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.35s;
+
 }
 
 #beginBtn:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 25px rgba(255,255,255,0.4);
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 35px rgba(255,255,255,.35);
+
 }
