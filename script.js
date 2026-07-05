@@ -1,5 +1,3 @@
-alert("JavaScript is working!");
-
 window.addEventListener("load", function () {
 
     setTimeout(function () {
