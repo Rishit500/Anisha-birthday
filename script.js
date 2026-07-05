@@ -1,13 +1,31 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
 
-    setTimeout(function () {
+    const container = document.querySelector(".floating-hearts");
 
-        const loader = document.getElementById("loader");
-        const website = document.getElementById("website");
+    for(let i=0;i<25;i++){
 
-        if (loader) loader.style.display = "none";
-        if (website) website.style.display = "block";
+        const heart=document.createElement("span");
 
-    }, 3000);
+        heart.innerHTML="❤";
+
+        heart.style.left=Math.random()*100+"%";
+
+        heart.style.animationDuration=(6+Math.random()*8)+"s";
+
+        heart.style.animationDelay=Math.random()*5+"s";
+
+        heart.style.fontSize=(15+Math.random()*25)+"px";
+
+        container.appendChild(heart);
+
+    }
+
+    setTimeout(()=>{
+
+        document.getElementById("loader").style.display="none";
+
+        document.getElementById("website").style.display="block";
+
+    },3000);
 
 });
